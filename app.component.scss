@@ -1,0 +1,52 @@
+.heading {
+    border-bottom: 1px solid rgb(255 255 255);
+    color: white;
+    background-color: #3f599e;
+}
+
+.tableDivEnd {
+    border-bottom: 1px rgb(104, 104, 104) solid;
+}
+.sideMenu {
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.1) !important
+    
+}
+
+.wholeBackground {
+    position: relative !important;
+    min-height: 100% !important;
+    min-width: 100% !important;
+    background-color: #f9f9f9 !important; 
+}
+.customCard {
+    padding: 10px;
+    padding-left: 16px;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+}
+.customCardSpan {
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.blink_Full {
+    animation: blinker 1.5s linear infinite;
+    color: red;
+    font-size: 1.2rem;
+    /* Larger, responsive font size */
+    margin-bottom: 20px;
+}
+.blink_half {
+    color: Orange;
+    font-size: 1.2rem;
+    /* Larger, responsive font size */
+    margin-bottom: 20px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
