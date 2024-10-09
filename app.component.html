@@ -1,0 +1,88 @@
+<div class="_email_1ao1k_1">
+
+  <div class="row">
+    <div class="col-12 heading row">
+      <span class="col-12" style="font-size: 2rem;font-weight: bold;margin-left:2rem">AI-Dustbin
+          <h6>Smart dustbin for smart cities</h6>
+      </span>
+    </div>
+  </div>
+  <div class="col-12" *ngIf="!isDataScreen"style="
+  text-align: center;
+  top: 29vh;
+  position: relative;
+  color: white;
+  
+">
+
+    <h1>Welcome to Ai-Dustbin</h1>
+    <button class="btn btn-primary " (click)="enterMainScreen()" >Click here to enter</button>
+  </div>
+  <div class="row col-12 wholeBackground" *ngIf="isDataScreen">
+  <div class="col-2 sideMenu"></div>
+  <div class="col-10 col-tableDivEnd">
+    <div class="row" style="padding: 0px;">
+    <div class="" style=" background: white;margin-bottom: 10px;padding:10px">
+    
+      <div style="padding: 1rem;"> <h4> Dustbin data</h4> </div>
+      <table class="table table-striped"style="border: 1px solid #d1d1d1">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Dustbin Id</th>
+            <th>Installation Date</th>
+            <th>Last Updated Date</th>
+            <th>Type</th>
+            <th>Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dustbinData of appModel; index as i">
+            <th>{{ i + 1}}</th>
+            <td>{{ dustbinData.uId }}</td>
+            <td>{{ dustbinData.installationDate }}</td>
+            <td>{{ dustbinData.lastUpdatedDate }}</td>
+            <td>{{ dustbinData.type }}</td>
+             <td><button class="btn btn-primary " (click)="onMoreInfoClick(i)"> More info </button></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-5 dustbin"  >
+    <h4 class="p-1"> Dustbin </h4>
+    <img *ngIf="!singleDustbin?.dustbinStatus || fillStatus === 'Empty' || fillStatus === ''" class ="col-4 dustbinImage" src="../assets/Empty.png">
+    <img *ngIf="fillStatus === 'Half'" class ="col-4 dustbinImage" src="../assets/Half.png">
+    <img *ngIf="fillStatus === 'Full'" class ="col-4 dustbinImage" src="../assets/Full.png">
+</div>
+<div *ngIf="!!singleDustbin" class="col-6 dustbinData" style="margin-left: 3px;">
+  
+  <div class="row col-12">
+    <div class="col-6 customCard"><span class="customCardSpan">Dustbin Id: {{singleDustbin.uId }}</span></div>
+    <div class="col-6 customCard"> <span class="customCardSpan">Type: {{ singleDustbin.type }}</span></div>
+  </div>
+  <div class="row col-12">
+    <div class="col-6 customCard"><span class="customCardSpan">Installation date : {{ singleDustbin.installationDate }}</span></div>
+    <div class="col-6 customCard"> <span class="customCardSpan">Last Updated : {{ singleDustbin.lastUpdatedDate }}</span></div>
+  </div>
+  <div class="row col-12">
+    <div class="col-6 customCard"><span class="customCardSpan" [ngClass]="singleDustbin.sensorStatus === 'Not working' ? 'blink_Full' : ''" >Sensor Status: {{singleDustbin.sensorStatus }}</span></div>
+    <div class="col-6 customCard"> <span class="customCardSpan" [ngClass]="singleDustbin.dustbinStatus === 'Full' ? 'blink_Full': singleDustbin.dustbinStatus === 'Half' ? 'blink_half': ''" >Dustbin status : {{ singleDustbin.dustbinStatus }}</span></div>
+  </div>
+  
+  <div class="row col-12">
+    <div class="col-6 customCard"><span class="customCardSpan">Admin Name: {{singleDustbin.adminName }}</span></div>
+    <div class="col-6 customCard"> <span class="customCardSpan">Admin Contact : {{ singleDustbin.adminContact }}</span></div>
+  </div>
+  <div class="row col-12">
+    <div class="col-6 customCard"><span class="customCardSpan">Location: {{singleDustbin.location }}</span></div>
+  </div>
+  <span><button class="btn btn-warning " (click)="sendEmail()"> Send Email to management </button></span>
+  <img style="margin-left: 10px;" *ngIf = "isLoading" height="35px" width="35px" src="../assets/loading-gif.gif">
+</div>
+</div>
+</div>
+  
+</div>
+</div>
