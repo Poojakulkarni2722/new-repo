@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.dustbin {
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.dustbinData {
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+body {
+    font-family: Open Sans, Roboto, Oxygen, Ubuntu, Cantarell, Lato, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
+    color: var(--textColor);
+    box-sizing: border-box;
+}
