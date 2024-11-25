@@ -1,0 +1,43 @@
+{
+  "data":  [
+    {
+        "Uid": "D-0001",
+        "Location": "Vijaynagar",
+        "DustbinStatus": 2,
+        "SensorStatus": 1,
+        "LastUpdatedDate":"20221207",
+        "SensorWorkingStatus": 0,
+        "Type": "W",
+        "IsDamage": "N",
+        "InstallationDate":"20200311",
+        "AdminName": "xyz",
+        "AdminContact":"4567890"
+    },
+    {
+        "Uid": "D-0002",
+        "Location": "Rajajinagar",
+        "DustbinStatus": 1,
+        "SensorStatus": 0,
+        "LastUpdatedDate":"2024026",
+        "SensorWorkingStatus": 0,
+        "Type": "D",
+        "IsDamage": "N",
+        "InstallationDate":"20210918",
+        "AdminName": "xyz",
+        "AdminContact":"4567890"
+    },
+    {
+        "Uid": "D-0003",
+        "Location": "Banashankari",
+        "DustbinStatus": 0,
+        "SensorStatus": 0,
+        "LastUpdatedDate":"20240809",
+        "SensorWorkingStatus": 0,
+        "Type": "W",
+        "IsDamage": "Y",
+        "InstallationDate":"20220514",
+        "AdminName": "xyz",
+        "AdminContact":"4567890"
+    }
+]
+}
